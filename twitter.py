@@ -3086,7 +3086,7 @@ class Api(object):
       u_status = unicode(status, self._input_encoding)
 
     data = {'status': status}
-    data['media'] = open(str(media), 'rb').read()
+    data['media'] = media
     if possibly_sensitive:
       data['possibly_sensitive'] = 'true'
     if in_reply_to_status_id:
